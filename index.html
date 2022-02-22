@@ -4,39 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>JS-SIMON</title>
 </head>
 <body>
 
     <header>
-        <h1>Simon Says</h1>
+        <div class="container title">
+            <h1>Simon Says </h1>
+        </div>
     </header>
 
     <main>
-        <div id="random">
-            <div class="numeri">22</div>
-            <div class="numeri">22</div>
-            <div class="numeri">22</div>
-            <div class="numeri">22</div>
-            <div class="numeri">22</div>
+        <div class="container-random">
+            <div id="random">
+                <!-- <div class="numeri">22</div>
+                <div class="numeri">22</div>
+                <div class="numeri">22</div>
+                <div class="numeri">22</div>
+                <div class="numeri">22</div> -->
+            </div>
         </div>
 
-        <h3>Inserisci i 5 numeri nelle caselle sottostanti</h3>
-        <input type="number" name="num1" id="num1">
-        <input type="number" name="num2" id="num2">
-        <input type="number" name="num3" id="num3">
-        <input type="number" name="num4" id="num4">
-        <input type="number" name="num5" id="num5">
+        <h3 class="titolo2">Inserisci i 5 numeri nelle caselle sottostanti</h3>
+        <div class="container-inserisci">
+            <input type="number" name="num1" id="num1">
+            <input type="number" name="num2" id="num2">
+            <input type="number" name="num3" id="num3">
+            <input type="number" name="num4" id="num4">
+            <input type="number" name="num5" id="num5">
 
+        </div>
 
 
     </main>
 
    <footer>
-        <div class="container">
-            <input type="button" value="start">
-            <input type="button" value="verifica">
+        <div class="container btn-container">
+            <input type="button" value="start" id="button-start">
+            <input type="button" value="verifica" id="button-verifica">
         </div>
    </footer>
     
