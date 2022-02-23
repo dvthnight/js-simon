@@ -44,12 +44,17 @@ function iniziaGioco(){
     for(let i=0; i<5; i++){
         const numRandom=getRandomIntInclusive(1,99);
         const divNumeri = document.createElement("div");
+        numeriRandom[i]=numRandom;
+
+        if(!numeriRandom.includes(numRandom)){
         divNumeri.append(numRandom);
-        
+
+        } else{
+            i--;
+        }       
         random.append(divNumeri);
         // random.classList.add("numeri")
 
-        numeriRandom[i]=numRandom;
         divNumeriRandom[i]=divNumeri;
     }
 
