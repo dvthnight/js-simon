@@ -14,7 +14,7 @@ const buttonVerifica = document.getElementById("button-verifica");
 
 
 const numeriRandom=[];
-
+const divNumeriRandom=[];
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -44,6 +44,7 @@ function iniziaGioco(){
         // random.classList.add("numeri")
 
         numeriRandom[i]=numRandom;
+        divNumeriRandom[i]=divNumeri;
     }
 
     setTimeout(attesa,5000);
@@ -56,7 +57,11 @@ function attesa(){
     contInserisci.classList.remove("non_mostrare");
     titolo2.classList.remove("non_mostrare");
     random.classList.add("non_mostrare");
+    for(let i=0; i<5; i++){
+        divNumeriRandom[i].classList.add("red");
+    }
     abilitazioneVerifica();
+
 
 }
 
@@ -90,6 +95,22 @@ function inserisciNumeri(){
         numeriRandom.includes(valNum5)
     ){
         alert("hai vinto la partita bravo hai tants memoria")
+    }
+
+    numeriUtente=[valNum1,valNum2,valNum3,valNum4,valNum5];
+
+    let k=0;
+
+    for(let i=0; i<5; i++){
+        if(numeriRandom.includes(numeriUtente[i])){
+            for(let j=0; j<5; j++){
+                if(numeriRandom[j]==numeriUtente[i]){
+                    divNumeriRandom[j].classList.remove("red");
+                    divNumeriRandom[j].classList.add("green");
+                    k++;
+                }
+            }
+        }
     }
 
 

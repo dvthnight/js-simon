@@ -78,3 +78,11 @@ footer{
 .titolo2.non_mostrare{
     display: none;
 }
+
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}
