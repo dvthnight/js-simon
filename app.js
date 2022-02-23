@@ -3,7 +3,11 @@ const num2 = document.getElementById("num2");
 const num3 = document.getElementById("num3");
 const num4 = document.getElementById("num4");
 const num5 = document.getElementById("num5");
-const random = document.getElementById("random")
+const random = document.getElementById("random");
+const contInserisci = document.querySelector(".container-inserisci");
+contInserisci.classList.add("non_mostrare");
+const titolo2 = document.querySelector(".titolo2");
+titolo2.classList.add("non_mostrare");
 
 const buttonStart = document.getElementById("button-start");
 const buttonVerifica = document.getElementById("button-verifica");
@@ -48,8 +52,15 @@ function iniziaGioco(){
     
 }
 
-
 function attesa(){
+    contInserisci.classList.remove("non_mostrare");
+    titolo2.classList.remove("non_mostrare");
+    random.classList.add("non_mostrare");
+    abilitazioneVerifica();
+
+}
+
+function abilitazioneVerifica(){
 
     buttonVerifica.addEventListener("click",inserisciNumeri);
 
@@ -58,6 +69,8 @@ function attesa(){
 function inserisciNumeri(){
     buttonVerifica.removeEventListener("click",inserisciNumeri);
     buttonStart.addEventListener("click",iniziaGioco);
+    random.classList.remove("non_mostrare");
+
     const valNum1 = parseInt(num1.value);
     const valNum2 = parseInt(num2.value);
     const valNum3 = parseInt(num3.value);
