@@ -38,6 +38,8 @@ function iniziaGioco(){
         
         random.append(divNumeri);
         // random.classList.add("numeri")
+
+        numeriRandom[i]=numRandom;
     }
 
     setTimeout(attesa,5000);
@@ -56,14 +58,26 @@ function attesa(){
 function inserisciNumeri(){
     buttonVerifica.removeEventListener("click",inserisciNumeri);
     buttonStart.addEventListener("click",iniziaGioco);
-    const valNum1 = num1.value;
-    const valNum2 = num2.value;
-    const valNum3 = num3.value;
-    const valNum4 = num4.value;
-    const valNum5 = num5.value;
+    const valNum1 = parseInt(num1.value);
+    const valNum2 = parseInt(num2.value);
+    const valNum3 = parseInt(num3.value);
+    const valNum4 = parseInt(num4.value);
+    const valNum5 = parseInt(num5.value);
 
-    console.log(valNum1,valNum2,valNum3);
+    console.log(valNum1,valNum2,valNum3,valNum4,valNum5);
+    console.log(numeriRandom[2],typeof(numeriRandom[2]));
+    console.log(valNum2,typeof(valNum2));
 
+
+    if(
+        numeriRandom.includes(valNum1)&&
+        numeriRandom.includes(valNum2)&&
+        numeriRandom.includes(valNum3)&&
+        numeriRandom.includes(valNum4)&&
+        numeriRandom.includes(valNum5)
+    ){
+        alert("hai vinto la partita bravo hai tants memoria")
+    }
 
 
 }
