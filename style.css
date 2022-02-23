@@ -86,3 +86,16 @@ footer{
 .red{
     color: red;
 }
+
+
+#timer{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+
+#timer.non_mostrare{
+    display: none;
+}

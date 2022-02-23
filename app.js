@@ -9,12 +9,18 @@ contInserisci.classList.add("non_mostrare");
 const titolo2 = document.querySelector(".titolo2");
 titolo2.classList.add("non_mostrare");
 
+const timer = document.getElementById("timer");
+
 const buttonStart = document.getElementById("button-start");
 const buttonVerifica = document.getElementById("button-verifica");
 
 
 const numeriRandom=[];
 const divNumeriRandom=[];
+
+let time = 5;
+
+timer.innerHTML = time;
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -47,6 +53,15 @@ function iniziaGioco(){
         divNumeriRandom[i]=divNumeri;
     }
 
+    let clock = setInterval(()=>{
+        time--;
+        timer.innerHTML=time;
+
+        if(time == 0){
+            clearInterval(clock);
+        }
+    },1000);
+
     setTimeout(attesa,5000);
 
     
@@ -57,6 +72,7 @@ function attesa(){
     contInserisci.classList.remove("non_mostrare");
     titolo2.classList.remove("non_mostrare");
     random.classList.add("non_mostrare");
+    timer.classList.add("non_mostrare");
     for(let i=0; i<5; i++){
         divNumeriRandom[i].classList.add("red");
     }
